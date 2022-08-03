@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 99%;
+    margin: auto;
+}
+
+.maindiv img{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+} 
+
+.maindiv .maindivcontent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.maindiv .maindivcontent h1,h3{
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 4px;
+}
+
+.maindiv .maindivcontent h1{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.maindiv .maindivcontent h3{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.maindiv .maindivcontent button{
+    margin: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 5px;
+    border: 1px solid whitesmoke;
+    background: transparent;
+}
+
+.maindiv .maindivcontent a:hover button:hover{
+    background-color: whitesmoke;
+    color: rgb(157, 62, 247);  
+}
+
+.maindiv .maindivcontent a button{
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+/* .maindiv .maindivcontent button a:hover{
+    color: rgb(157, 62, 247); */
+/* } */
+
+.box1{
+    color: whitesmoke;
+    background-color: rgb(157, 62, 247);
+    margin: -4px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: medium;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+
+
+.box2{
+    background-color: whitesmoke;
+    color: rgb(157, 62, 247);
+    /* font-family: Arial, Helvetica, sans-serif; */
+    margin: -4px;
+    font-size: medium;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+
+}
+
+.flexapply{
+    display: flex;
+}
