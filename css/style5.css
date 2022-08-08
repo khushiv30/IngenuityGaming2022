@@ -1,0 +1,176 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.sky{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../Assets/sky.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.highway{
+    height: 200px;
+    width: 300%;
+    background-image: url(../Assets/highway.jpg);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right:0;
+    animation: highway 20s linear infinite;
+}
+
+@keyframes highway {
+    100%{
+        transform: translateX(-1500px);
+    }
+}
+
+.city{
+    width: 300%;
+    height: 200px;
+    background-image: url(../Assets/city.png);
+    opacity: 1;
+    position: absolute;
+    bottom: 200px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    animation: city 20s linear infinite;
+}
+
+@keyframes city {
+    100%{
+        transform: translateX(-1500px);
+    }
+}
+
+.car{
+    width: 350px;
+    /* height: 50px; */
+    /* border: 2px solid green; */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100px;
+    z-index: 2;
+}
+
+.car img{
+    /* height: 100%; */
+    width: 100%;
+    animation: car 1s linear infinite;
+}
+
+@keyframes car {
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(5px);
+    }
+}
+
+.wheel{
+    /* border: 2px solid red; */
+    position: absolute;
+    bottom: 176px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.wheel img{
+    width: 70px;
+    height: 70px;
+    animation: wheel 1s linear infinite;
+}
+
+.front_wheel{
+    position: absolute;
+    left: 67px;
+}
+
+.back_wheel{
+    position: absolute;
+    left:-148px;
+}
+
+@keyframes wheel {
+    100%{
+        transform: rotate(360deg)
+    }
+}
+
+.airplane{
+    top: 50px;
+    left: 10%;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .flame{
+    top: -40px;
+    left: 150px;
+    height: 10px;
+    width:60px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #b1b1b1;
+    animation: flame 0.3s linear infinite;
+     z-index: -1;
+  }
+  .flame2{
+    top: -195px;
+    left: 115px;
+  }
+  @keyframes flame{
+    0%{
+      transform: translateX(0%);
+    }
+    50%{
+      transform: translateX(50%);
+    }
+    100%{
+      transform: translateX(0%);
+    }
+  }
+
+
+  /* .bird-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    will-change: transform;
+    z-index: 5;
+  }
+
+  .bird{
+    background-image: url(../Assets/bird-cells.svg);
+    background-size: cover;
+    width: 1500px;
+    height: 300px;
+    will-change: background-position;
+    animation-name: fly-cycle;
+    animation-duration: 1s;
+    animation-delay: -0.5s;
+    animation-timing-function: steps(10);
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes fly-cycle {
+    100%{
+        background-position: -360px 0;
+    }
+  } */
