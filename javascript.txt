@@ -1,0 +1,88 @@
+JS is a text based programming language used both on client side and server side that allows you to make web pages 
+interactive .
+Where HTML and CSS are languages that give structure to web pages , JS makes your webpage dynamic.
+
+Browsers have JavaScript Engine ..... eg : Firefox : SpiderMonkey 
+                                            Chrome : v8
+
+JS code can also run in Node 
+
+ECMA script is a specification of JS 
+
+JS is OOP language
+
+ctrl + shift + J ----> console open karne k liye
+
+
+var date = new Date();
+document.body.innerHTML="<h1> Todaty Date " + date + "</h1>"
+
+document.body.style.backgroundColor="orange"
+
+document.body.style.color="white";
+
+We use variablse to store data temporarily
+
+        // Single line Comment 
+        // Multiline 
+        // Comments
+
+        // Variables in javascript 
+        // var name="khushi";      //; is optional
+
+        var name ;
+        name="khushi";
+
+        // Variable Rules 
+        1. Variables are case sensitive
+        2. Variable name cannot start from Number
+        3. Only Underscore is used as special symbols
+        4. Spaces are not allow between variable name 
+
+        var fisrt name="khushi"       //not allowed
+        var firstname="khushi"         //allowed
+
+
+Primitive datat types :
+
+1. String
+var firstName="Khushi";
+var lastName="Varshney";
+
+2. Number
+var dist=40;
+var exactdist=40.7;
+
+3. Boolean
+var isOpened=false;
+
+4. undefined : work as both data type and value
+
+// Type of programming language
+
+firstName=5000;
+console.log(typeOf firstName);
+
+JS is a typeless or loosely typed language .... it can change data type any time .... which makes JS to be dynamic
+
+JS worked in two modes 
+1. Sloppy mode : by default mode
+2. Strict mode : use 'strict'
+
+Dialogue boxes
+1. alert : used to display some messages as notification 
+2. confirm : a dialog box which takes input as "yes" or "no" 
+3. prompt : used to take input from user
+
+
+NODE : 
+
+to check node hai ya nahi :
+1. cmd pmt 
+2. node -v   ..... version 
+
+npm 
+
+node download kar k terminal p ese chla skte hein 
+
+node abc.JS

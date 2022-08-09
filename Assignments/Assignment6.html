@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-6</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1 style="text-align: center; background-color: rgb(51, 29, 129); margin: 15px; padding: 10px; font-family: 'Dancing Script', cursive;">Hello your name is : <span id="name"></span></h1>
+   <h2 style="text-align: center;font-size: 30px;color: yellow;font-family: 'Shadows Into Light', cursive;"> Today Date : <span id="date"></span></h2>
+   <h2 style="text-align: center;font-size: 30px;color: yellow;font-family: 'Shadows Into Light', cursive;"> Today Day : <span id="day"></span></h2>
+    <h3 style="padding-left: 15px;font-size:25px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Addition of Numbers : <span id="add"></span></h3>
+    <h3 style="padding-left: 15px;font-size:25px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Division of Numbers : <span id="divi"></span></h3>
+    <h3 style="padding-left: 15px;font-size:25px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Multiplication of Numbers : <span id="mul"></span></h3>
+    <h3 style="padding-left: 15px;font-size:25px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Subtraction of Numbers : <span id="sub"></span></h3>
+
+    <script>
+
+document.body.style.background="radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,174,70,1) 100%)";
+        document.body.style.color="whitesmoke";
+
+
+        var date =new Date();
+        var date = date.getDate() +"/" + (date.getMonth()+1) + "/"+ date.getFullYear();
+        // document.body.innerHTML="<h1> Today Day : " + date.getDay() + "</h1>";
+
+        var myDate=new Date();
+        var myDay=myDate.getDay();
+        var weekday=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+        var day=(weekday[myDay]);
+        
+        // document.body.style.backgroundColor='red';
+        var name=prompt("Enter your Name");
+        var a=prompt("Enter the First Number");
+        var b=prompt("Enter the Second Number");
+        
+       
+        var add=Number(a)+Number(b);
+        var divide=a/b;
+        var mult=a*b;
+        var minu=a-b;
+        document.getElementById("date").innerHTML=date;
+        document.getElementById("day").innerHTML=day;
+        document.getElementById("name").innerHTML=name;
+        document.getElementById("add").innerHTML=add;
+        document.getElementById("divi").innerHTML=divide;
+        document.getElementById("mul").innerHTML=mult;
+        document.getElementById("sub").innerHTML=minu;
+        
+    </script>
+</body>
+</html>

@@ -1,3 +1,7 @@
+ctrl + shift + I ------> to open developer tool
+
+
+
 Transformation 
 
 main background mein 4 boxes bnaye hein .... phir unko style kiya hai ..... 
