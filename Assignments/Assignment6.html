@@ -25,13 +25,32 @@ document.body.style.background="radial-gradient(circle, rgba(63,94,251,1) 0%, rg
 
 
         var date =new Date();
-        var date = date.getDate() +"/" + (date.getMonth()+1) + "/"+ date.getFullYear();
+        var datedigit=date.getDate();
+        var datemonth=date.getMonth()+1;
+        // var date = date.getDate() +"/" + (date.getMonth()+1) + "/"+ date.getFullYear();
+        
         // document.body.innerHTML="<h1> Today Day : " + date.getDay() + "</h1>";
 
         var myDate=new Date();
         var myDay=myDate.getDay();
         var weekday=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
         var day=(weekday[myDay]);
+
+        if(datedigit<10){
+            var datedigit="0"+datedigit;
+        }
+        else{
+            var datedigit=datedigit;
+        }
+
+        if(datemonth<10){
+            var datemonth="0"+datemonth;
+        }
+        else{
+            var datemonth=datemonth;
+        }
+
+        var date = datedigit +"/" + datemonth + "/"+ date.getFullYear();
         
         // document.body.style.backgroundColor='red';
         var name=prompt("Enter your Name");
