@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-7</title>
+    <link rel="stylesheet" href="../css/style7a.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Let's find sum of Numbers</h1>
+        <!-- <p class="enter">Enter your Numbers here :</p>
+        <div class="box1"></div> -->
+        <p>Sum comes out to be :
+        <div class="box2">
+            <span id="sum"></span></div>
+        </div>
+        <script>
+
+            var sum = 0;
+            while (true) {
+                var number = prompt("ENTER A NUMBER : ");
+                if (number >= 0) {
+                    sum = Number(sum) + Number(number);
+                }
+                if (number < 0) {
+                    break;
+                }
+            }
+            document.getElementById("sum").innerHTML = sum;
+        </script>
+    </div>
+
+</body>
+
+</html>

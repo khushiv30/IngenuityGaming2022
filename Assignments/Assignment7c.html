@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-7</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+        }
+        .box1{
+            margin-top: 250px;
+          /* margin: auto; */
+          padding: 10px;
+          background-color: rgb(187, 255, 255);
+          color: deeppink;
+          height: 125px ;
+          width: 300px;
+          text-align: center;
+          font-size: medium;
+          font-family: cursive;
+          border: 1px solid greenyellow;
+          border-radius: 10%;
+          line-height: 1.5;
+   
+        }
+    </style>
+</head>
+<body>
+    <div class="box1" id="box11"></div>
+    <script>
+        var person_Obj={
+    name:"Khushi Varshney",
+    age:21,
+    address:{city:"Aligarh",state:"Uttar Pradesh",pincode:202001},
+    hobbies:["dancing","listening music"],
+    display:function(){
+        return (`Name: ${this.name} <br> Age: ${this.age} <br> Address: ${this.address.city}, ${this.address.state}, ${this.address.pincode} <br> Hobbies : ${this.hobbies[0]}, ${this.hobbies[1]}`);
+    }
+}
+document.getElementById("box11").innerHTML=person_Obj.display();
+</script>
+</body>
+</html>
