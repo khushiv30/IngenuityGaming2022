@@ -9,9 +9,15 @@
 </head>
 
 <body>
-    <pre>Write a Program to return sum of all Arguments passed to a Function.
-        console.log(add(2, 3));              // 5
-        console.log(add(1, 2, 3, 4, 5));     // 15</pre>
+    <div style="height:100vh;display: flex;flex-direction:column;justify-content:center;align-items:center;background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    font-size:25px;">
+        <pre>Write a Program to return sum of all Arguments passed to a Function.
+            console.log(add(2, 3));              // 5
+            console.log(add(1, 2, 3, 4, 5));     // 15</pre>
+    
+        <p style="border:1px solid black;padding: 10px;border-radius: 5px;">Sum of numbers is : <span id="get"></span></p>
+    </div>
     
 
     <script>
@@ -29,7 +35,8 @@
             }
             return sum;
         }
-        document.write("Sum of numbers is : " + parseInt(add()));
+        // document.write("Sum of numbers is : " + parseInt(add()));
+        document.getElementById('get').innerHTML=add();
     </script>
 </body>
 
