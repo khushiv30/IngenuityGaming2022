@@ -66,18 +66,18 @@
 .car img{
     /* height: 100%; */
     width: 100%;
-    animation: car 1s linear infinite;
+    /* animation: car 1s linear infinite; */
 }
 
 @keyframes car {
     0%{
-        transform: translateY(-5px);
+        transform: translateY(-3px);
     }
     50%{
         transform: translateY(0px);
     }
     100%{
-        transform: translateY(5px);
+        transform: translateY(3px);
     }
 }
 

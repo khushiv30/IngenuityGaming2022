@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-9(b)</title>
+</head>
+<body style="background: rgb(236,230,118);
+background: linear-gradient(342deg, rgba(236,230,118,1) 51%, rgba(39,53,70,1) 100%);display: flex;justify-content: center;align-items: center;height: 100vh;color: brown;font-weight: bold;font-size: 25px;">
+    <script>
+        function myDetails(){
+            this.myName="Khushi Varshney";
+            this.myAge=21;
+            this.current_designation="Trainee";
+            
+
+            this.details=function(){
+                return "Name : "+this.myName+" , Age : "+this.myAge+" , Current Designation : "+this.current_designation;
+            }
+        }
+        var res=new myDetails();
+        document.write("More than one values have been returned => "+res.details());
+    </script>
+</body>
+</html>

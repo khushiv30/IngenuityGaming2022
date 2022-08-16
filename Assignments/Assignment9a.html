@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-9(a)</title>
+</head>
+
+<body>
+    <pre>Write a Program to return sum of all Arguments passed to a Function.
+        console.log(add(2, 3));              // 5
+        console.log(add(1, 2, 3, 4, 5));     // 15</pre>
+    
+
+    <script>
+        var a = prompt("How many numbers will you enter : ");
+        // a=parseInt(a);
+        var num=[];
+        for(var i=0;i<a;i++){
+           // prompt("Enter number "+(i+1) +" :");
+            num[i]= parseInt(prompt("Enter number "+(i+1) +" :"));
+        }
+        function add(){
+            var sum=0;
+            for(var i=0;i<a;i++){
+                sum=sum+num[i];
+            }
+            return sum;
+        }
+        document.write("Sum of numbers is : " + parseInt(add()));
+    </script>
+</body>
+
+</html>

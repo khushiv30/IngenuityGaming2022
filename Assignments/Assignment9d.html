@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-9(d)</title>
+</head>
+<body style="background:linear-gradient(90deg, rgba(238,174,202,0.9360119047619048) 0%, rgba(39,53,70,1) 100%);">
+
+    <h1 style="color: blanchedalmond;">Write a JavaScript program to create a new string adding "New!" in front of a given String. If the given string begins with "New!" already then return the original string. (Use Functional Approach)</h1>
+
+    <div style="display: flex;justify-content:center;">
+        <p style="font-size: 50px;display:inline-flex;justify-content:center;border:1px solid blanchedalmond;padding:10px;color: blanchedalmond;border-radius: 3px;">Generated String : <span id="result"></span></p>
+    </div>
+
+    <script>
+        function trynew(str){
+            str=str.split("");
+            var p,q,r,s=0;
+            for(var i=0;i<4;i++){
+                if(str[i]=='N' && i==0){
+                    p=1;
+                    continue;
+                }
+                else if(str[i]=='e' && i==1){
+                    q=1;
+                    continue;
+                }
+                else if(str[i]=='w' && i==2){
+                    r=1;
+                    continue;
+                }
+                else if(str[i]=='!' && i==3){
+                    s=1;
+                    continue;
+                }
+            }
+            if(p==1 && q==1 && r==1 && s==1){
+                str2=str.join("");
+                document.getElementById("result").innerHTML=str2;
+            }
+            else{
+                str2=str.join("");
+                document.getElementById("result").innerHTML=" New! "+str2;
+            }
+        }
+
+        var str=prompt("Enter the String : ");
+        trynew(str);
+    </script>
+</body>
+</html>
