@@ -13,7 +13,8 @@
     </h1>
      
     <p>
-        Original string is: khushi is a trainee at Ingenuity Gaming
+        <!-- Original string is: khushi is a trainee at Ingenuity Gaming -->
+        Original string is : <pre id="str"></pre>
     </p>
      
     <p>
@@ -26,12 +27,14 @@
     </button>
      
     <script type="text/javascript">
+        var str=prompt("Enter a string with whitespaces : ");
+        document.getElementById('str').innerHTML=str;
         function removeSpaces() {
-            originalText =
-                "khushi is a trainee at Ingenuity Gaming";
+          //  originalText =
+                // "khushi is a trainee at Ingenuity Gaming";
          
             removedSpacesText =
-                originalText.split(" ").join("");
+                str.split(" ").join("");
          
             document.querySelector('.output').textContent
                     = removedSpacesText;

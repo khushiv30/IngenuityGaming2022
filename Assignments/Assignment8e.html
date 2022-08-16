@@ -7,6 +7,21 @@
     <title>Assignment-8</title>
 </head>
 <body>
-    
+    <h1 style="color: green;">Write a code to sort the string in descending order.</h1>
+    <p>The original string is : <span id="str"></span></p>
+    <p>The sorted and reversed String is : <span id="strNew"></span></p>
+    <script>
+        var str=prompt("Enter the string : ");
+        document.getElementById('str').innerHTML=str;
+       // document.getElementById('strNew').innerHTML=strNew;
+        str=str.split("");
+        descendingorder(str);
+        function descendingorder(str){
+            str.sort().reverse();
+             s=str.join("");
+        }
+        document.getElementById('strNew').innerHTML=s;
+
+    </script>
 </body>
 </html>

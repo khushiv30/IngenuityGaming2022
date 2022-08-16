@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment-8</title>
 </head>
+
 <body>
-    
+    <h1 style="color: green;">We need to check whether all Students passed or not</h1>
+    <p>Passing marks are 30 .</p>
+    <p>Marks of Students are : <span id="marks"></span></p>
+    <p>Hence,we found that : <span id="result"> </span></p>
+
+
+    <script>
+        var marksarray = [];
+
+        for (var i = 0; i < 5; i++) {
+            var inputmarks = prompt("Enter marks of 5 students from 0 to 100");
+            marksarray.push(inputmarks);
+        }
+       // marksarray = marksarray.join(",");
+        document.getElementById('marks').innerHTML = marksarray;
+        for (var i = 0; i < 5; i++) {
+            if (marksarray[i] < 30) {
+                document.getElementById('result').innerHTML = "All students did not pass";
+                break;
+            }
+        }
+        if (i == 5) {
+            document.getElementById('result').innerHTML = "All students have passed";
+        }
+    </script>
 </body>
+
 </html>
