@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-10(c)</title>
+</head>
+<body>
+    <h1>Write a Program to call a function in an interval of 3 sec for 5 times.</h1>
+    <!-- <p id="calling"></p> -->
+    <script>
+        // for(var i=0;i<5;i++){
+        //     var timer;
+         
+        // function startTimer() {
+        //     timer = setInterval(function() {
+        //         alert("3 seconds are up");
+        //     }, 3000);
+        // }
+         
+        // function stopTimer() {
+        //     alert("Timer stopped");
+        //     clearInterval(timer);
+        // }
+        // }
+
+        var i=0;
+
+        function sayHello(){
+            document.write("Called function ");
+            // document.getElementById("calling").innerHTML="Called Function";
+            i++;
+            document.write(i+" time "+"<br>");
+            if(i==5){
+                clearInterval(c);
+            }
+        }
+
+        var c=setInterval(sayHello,3000);
+
+        
+    </script>
+</body>
+</html>

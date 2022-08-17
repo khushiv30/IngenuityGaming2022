@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-10(d)</title>
+</head>
+
+<body>
+    <h1>Write a Program to iterate an Array of Objects using map function.</h1>
+    <p>Showing Array of Objects : <br><span id="calling"></span></p>
+    <script>
+        var people = [
+            { name: "Ashish", age: 23 },
+            { name: "Ajay", age: 21 },
+            { name: "Arvind", age: 26 },
+            { name: "Mahesh", age: 28 },
+            { name: "Jay", age: 19 }
+        ];
+
+        var joining=people.map((u)=>{
+            return "Name : "+u.name+" , "+"Age : "+u.age+"</br>";
+        });
+
+        document.getElementById('calling').innerHTML=joining.join("");
+    </script>
+</body>
+
+</html>

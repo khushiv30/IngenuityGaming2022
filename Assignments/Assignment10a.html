@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-10(a)</title>
+</head>
+
+<body>
+    <h1> Write a Program to use call() and apply() Method</h1>
+    <p>This is using call() method : <span id="call"></span></p>
+    <p>This is using apply() method : <span id="apply"></span></p>
+    <script>
+        var person1 = {
+            firstName: "Khushi",
+            lastName: "Varshney",
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            },
+            moredetails: function( city,country)
+            {
+                return this.firstName + " " + this.lastName +" "+city+" "+ country;
+            }
+
+            
+        };
+        var x = (person1.fullName.call(person1));
+        document.getElementById('call').innerHTML = x;
+        var y=(person1.moredetails.apply(person1,["Aligarh","India"]));
+        document.getElementById('apply').innerHTML = y;
+    </script>
+</body>
+
+</html>

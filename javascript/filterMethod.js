@@ -79,3 +79,8 @@ let cities=[
 ];
 var bigCities=cities.filter((city)=>city.population>3000000).sort().reverse();       // sorted according to name
 console.log(bigCities);
+
+var bigCities=cities.filter((city)=>city.population>3000000).sort(function(n1,n2){
+    return n2.name-n1.name;
+});
+console.log(bigCities);

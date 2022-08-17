@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-10(e)</title>
+</head>
+
+<body>
+    <h1>Write a Program to Filter out people whose age is less than 25 in descending order.</h1>
+    <p>Original Array of people : 
+    <pre>    { Name: "khushi", Age: 21 },
+    { Name: "Karan", Age: 19 },
+    { Name: "Pranav", Age: 22 },
+    { Name: "Arti", Age: 27 }</pre>
+    </p>
+    <p>Filtered people come out to be : <span id="me"></span></p>
+    <script>
+        let people = [
+            { Name: "khushi", Age: 21 },
+            { Name: "Karan", Age: 19 },
+            { Name: "Pranav", Age: 22 },
+            { Name: "Arti", Age: 27 },
+        ]
+
+        var bigpeop = people.filter((ag1) => ag1.Age < 25).sort();
+        document.getElementById('me').innerHTML = JSON.stringify(bigpeop, null, 4);
+    </script>
+</body>
+
+</html>

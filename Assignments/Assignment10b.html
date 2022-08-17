@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-10(b)</title>
+</head>
+<body>
+    <h1> Write a Program to create an array having cube root of every element of another array.</h1>
+    <p>Original Array is : [8,27,64,125,216]</p>
+    <p>Array of cube roots is : [<span id="arr"></span>]</p>
+
+    <script>
+        var numbers = [8,27,64,125,216];    
+        // numbers.forEach((a)=>document.getElementById('arr').innerHTML=a**(1/3));
+        
+        
+        // numbers.forEach((a) => console.log(a**(1/3)));
+        // numbers=(a**(1/3));
+        // document.getElementById('arr').innerHTML=a;
+        // console.log(numbers);
+
+        var newArray=numbers.map((i)=>Math.cbrt(i));
+        document.getElementById('arr').innerHTML=newArray;
+    </script>
+</body>
+</html>

@@ -1,9 +1,9 @@
 // var obj = {
 //     firstName : "Sachin",
 //     lastName : "Yadav",
-//     fullName : function(){
-//         return this.firstName + " " + this.lastName;
-//     },
+    // fullName : function(){
+    //     return this.firstName + " " + this.lastName;
+    // },
 // };
 
 // console.log(obj.fullName());
