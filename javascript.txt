@@ -88,3 +88,12 @@ node download kar k terminal p ese chla skte hein
 node abc.JS
 
 
+
+
+
+Event Handling :
+
+Three ways to handle events : 
+1. Inline Event Handling
+2. Handling event using it's reference
+3. Using AddEventListener
