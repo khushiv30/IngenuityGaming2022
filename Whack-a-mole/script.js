@@ -16,7 +16,7 @@ var time= document.querySelectorAll(".seetime");
 
 // Generating Random Number :
 // Math.floor(Math.random() * (maximum – minimum + 1)) + minimum
-var currtime=10;
+var currtime=60;
 var counter=0;
 
 // var tym=20000;
@@ -85,7 +85,7 @@ function start(){
         points.style.visibility="hidden";
         time.style.visibility="hidden";
         // pointsNum.style.visibility="hidden";
-    },10000);
+    },60000);
 
 
 }
