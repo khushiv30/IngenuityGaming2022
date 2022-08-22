@@ -90,6 +90,9 @@ sum(1, 2, 3);
 sum(1, 3, 5, 7, 9);
 
 // Comments 
+// 1. JS function definitions do not specify data types for parameters
+// 2. JS functions do not perform type checking on the passed arguments
+// 3. JS functions do not check the number of arguments recieved
 
 
 
@@ -98,11 +101,14 @@ sum(1, 3, 5, 7, 9);
 var myFunction4 = new Function("a", "b", "return a+b");
 console.log("Function using constructor : " + myFunction4(5, 10));
 
-// In Javascript , the purpose of Function Constructor is 
+// In Javascript , the purpose of Function Constructor is to create a new function Object . 
+//It executes the code globally . However,if we call the constructor directly , a function is created dynamically but 
+//in an unsecured way.
 
 
 
-// Function Expression : It means storing function definition inside a variable is called funtion expression  It is also k/a Anonymous Function.
+// Function Expression : It means storing function definition inside a variable is called funtion expression .
+// It is also k/a Anonymous Function.
 // A simple statement that ends with a ; is called an expression 
 
 var a = function () {

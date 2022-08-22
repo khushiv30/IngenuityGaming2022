@@ -57,3 +57,19 @@ transform : rotate() translate();
 
 
 car , city , highway , sky , wheel
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+1MB=1024 KB 
+
+WEB STORAGE 
+
+1.Local Storage
+2.Session Storage
+
+http : state-less protocol
+
+
+

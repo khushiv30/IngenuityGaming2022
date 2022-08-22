@@ -43,7 +43,7 @@ We use variablse to store data temporarily
         var firstname="khushi"         //allowed
 
 
-Primitive datat types :
+Primitive data types :
 
 1. String
 var firstName="Khushi";
