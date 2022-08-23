@@ -9,20 +9,28 @@
 </head>
 
 <body>
-    <button id="button" onclick="OpenWindow()">Open form here</button>
+    <button onclick="OpenWindow()">Open form here</button>
     <script>
         window.onload = function () {
-            setInterval(() => {
+            var pop=setInterval(() => {
                 openform();
+                clearInterval(pop);
             }, 10000);
-        }
+        };
 
         function openform(){
             var url="../Assignments/ContactForm.html";
-            var windowSize="height:500,width:500";
+            var windowSize="height:400,width:400";
+            // var window = window.open(url,"_blank",windowSize);
             window.open(url,"About page ",windowSize);
         }
 
+        function OpenWindow(){
+            var url="../Assignments/ContactForm.html";
+            var windowSize="height:400,width:400";
+            // var window = window.open(url,"_blank",windowSize);
+            window.open(url,"About page ",windowSize);
+        }
 
     </script>
 </body>
