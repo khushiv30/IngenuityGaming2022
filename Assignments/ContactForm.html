@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body{
+            height: 100vh;
+            background-color: skyblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* input{
+            float: right;
+        }
+        ul li {
+            float: right;
+        } */
+        /* ul{
+            float: right;
+        } */
+        /* .btn:hover{
+            color: black;
+            background-color: white;
+        } */
+    </style>
+</head>
+<body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif;">Contact Form</h1>
+    <div style="border: 1px solid rgb(235, 235, 235);width:600px;background-color: rgb(235, 235, 235);padding: 15px;border-radius: 5px;display: flex;flex-direction: column;">
+        <h3 style="text-align: center;color: rgb(94, 94, 94);font-family: Arial, Helvetica, sans-serif;">Tell Us Something about You</h3>
+        <form action="">
+            <p>
+                <label for="user">Name</label>
+                <input type="text" name="" id="user" placeholder="Enter Your name" style="color: rgb(235, 235, 235);">
+            </p>
+            <p>
+                <label for="email">Email</label>
+                <input type="text" name="" id="email" placeholder="Enter your email address">
+            </p>
+            <p>
+                <label for="scale">On a scale of 1-10,how good was it?</label>
+                <input type="text" name="" id="scale" placeholder="Enter a number between 1 to 10" style="width: 200px;">
+            </p>
+            <p>
+                <label for="options">Where you want to use it?</label>
+                <select name="" id="options" style="">
+                    <option value="">At home</option>
+                    <option value="">At office</option>
+                    <option value="">Others</option>
+                </select>
+            </p>
+            <p style="display: inline-block;">
+                <label for="asktime">At what time We can contact you?</label>
+                <ul style="list-style:none;">
+                    <li><input type="radio" name="" id="">Morning</li>
+                    <li><input type="radio" name="" id="">Afternoon</li>
+                    <li><input type="radio" name="" id="">Evening</li>
+                </ul>    
+            </p>
+            <p style="display: inline-block;">
+                <label for="">What emotions did you experience?<br>(Select all that apply)</label>
+                <ul style="list-style: none;">
+                    <li><input type="checkbox" name="" id="">Excited</li>
+                    <li><input type="checkbox" name="" id="">Humbled</li>
+                    <li><input type="checkbox" name="" id="">Elated</li>
+                    <li><input type="checkbox" name="" id="">Loved</li>
+                    <li><input type="checkbox" name="" id="">Enthusiastic</li>
+                </ul>         
+            </p>
+            <p>
+                <label for="">Please describe your positive experience.</label>
+                <input type="text" name="" placeholder="Enter your positive experiene here" id=""style="height:60px;width:250px;float:right;">
+            </p>
+        </form>
+        <button class="btn" style="padding:15px;margin-top:15px;width: 100px;border:1px solid skyblue;border-radius:5px;background-color: skyblue;color:white;align-items: center;font-weight: bold;font-size: 15px;margin-left:250px;cursor: pointer;">Submit</button>
+    </div>
+</body>
+
+</html>

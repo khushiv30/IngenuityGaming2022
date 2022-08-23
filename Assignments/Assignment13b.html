@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-13</title>
+</head>
+
+<body>
+    <button id="button" onclick="OpenWindow()">Open form here</button>
+    <script>
+        window.onload = function () {
+            setInterval(() => {
+                openform();
+            }, 10000);
+        }
+
+        function openform(){
+            var url="../Assignments/ContactForm.html";
+            var windowSize="height:500,width:500";
+            window.open(url,"About page ",windowSize);
+        }
+
+
+    </script>
+</body>
+
+</html>
