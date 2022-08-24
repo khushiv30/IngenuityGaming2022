@@ -52,8 +52,12 @@
             color: white;
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 25px;
             /* float: left; */
+        }
+
+        .container p span{
+            color: black;
         }
     </style>
 </head>
@@ -62,13 +66,13 @@
     <div class="para">Fetching data using covid API</div>
     <div class="container">
         <h1>Today Covid Cases</h1>
-        <div style="margin-right: 400px;margin-top:15px;">
-            <p>Country name :</p>
-            <p>Date :</p>
-            <p>Total Cases :</p>
-            <p>Total Deaths :</p>
-            <p>New Cases :</p>
-            <p>New Deaths :</p>
+        <div id="para" style="margin-right: 250px;margin-top:15px;width: 400px;">
+            <p>Country Name : <span id="country"></span></p>
+            <p>Date : <span id="date"></span></p>
+            <p>Total Cases : <span id="totalCases"></span></p>
+            <p>Total Deaths : <span id="totaldeaths"></span> </p>
+            <p>New Cases : <span id="newcases"></span> </p>
+            <p>New Deaths : <span id="newdeaths"></span> </p>
         </div>
     </div>
     <script>
@@ -101,33 +105,46 @@
         getApiData(API_URL)
             .then((val) => {
                 console.log(JSON.parse(val));
-                // displayData(JSON.parse(val));
+                 displayData(JSON.parse(val));
             })
             .catch((err) => console.log("Error" + err));
 
         function displayData(serverData) {
             // console.log(serverData)
-            for (var user of serverData) {
-                let newtr = document.createElement("tr");
-                let newtd1 = document.createElement('td');
-                let newtd2 = document.createElement('td');
-                let newtd3 = document.createElement('td');
-                let newtd4 = document.createElement('td');
+            console.log(serverData.Countries[1].Country);
+           
+
+            var i=prompt("Enter a number from 1 to 199");
+                let newtd = document.createElement('p');
+
+
+                let newtd1 = document.createElement('country');
+                let newtd2 = document.createElement('date');
+                let newtd3 = document.createElement('totalCases');
+                let newtd4 = document.createElement('totaldeaths');
+                let newtd5 = document.createElement('newcases');
+                let newtd6 = document.createElement('newdeaths');
 
                 // newtd1.innerText=`$(user.id)`;
-                newtd1.innerText = "" + user.id;
-                newtd1.innerText = "" + user.name;
-                newtd1.innerText = "" + user.email;
-                newtd1.innerText = "" + user.phone;
+                document.getElementById('country').innerText = "" +serverData.Countries[i].Country ;
+                document.getElementById('date').innerText=""+serverData.Countries[i].Date;
+                document.getElementById('totalCases').innerText=""+serverData.Countries[i].TotalConfirmed;
+                document.getElementById('totaldeaths').innerText=""+serverData.Countries[i].TotalDeaths;
+                document.getElementById('newcases').innerText=""+serverData.Countries[i].NewConfirmed;
+                document.getElementById('newdeaths').innerText=""+serverData.Countries[i].NewDeaths;
+               
 
-                newtr.appendChild(newtd1);
-                newtr.appendChild(newtd2);
-                newtr.appendChild(newtd3);
-                newtr.appendChild(newtd4);
 
-                document.getElementById('myTable').appendChild(newtr);
+                newtd.appendChild(newtd1);
+                newtd.appendChild(newtd2);
+                newtd.appendChild(newtd3);
+                newtd.appendChild(newtd4);
+                newtd.appendChild(newtd5);
+                newtd.appendChild(newtd6)
+
+                document.getElementById('para').appendChild(newtd);
             }
-        }
+        
 
 
     </script>
