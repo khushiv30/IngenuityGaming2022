@@ -127,7 +127,8 @@
 
                 // newtd1.innerText=`$(user.id)`;
                 document.getElementById('country').innerText = "" +serverData.Countries[i].Country ;
-                document.getElementById('date').innerText=""+serverData.Countries[i].Date;
+                var date = new Date().toDateString();
+                document.getElementById('date').innerText=""+ date;
                 document.getElementById('totalCases').innerText=""+serverData.Countries[i].TotalConfirmed;
                 document.getElementById('totaldeaths').innerText=""+serverData.Countries[i].TotalDeaths;
                 document.getElementById('newcases').innerText=""+serverData.Countries[i].NewConfirmed;
