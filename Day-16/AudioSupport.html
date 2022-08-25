@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Tag</title>
+</head>
+<body>
+    <audio controls loop autoplay muted>
+        <source src="../Assets/Pasoori Shae Gill 128 Kbps.mp3" type="audio/mp3"/>
+        <!-- <source src="../Assets/mixkit-winning-a-coin-video-game-2069.wav"> -->
+        
+    </audio>
+    <!-- <video  controls>
+        
+        <source src="../Assets/Coke Studio Season 14 Pasoori Ali Sethi  (You2Audio.Com).mp4" type="video/mp4">
+        <source src="">
+        <source src="">
+    </video> -->
+
+    <button id="btn1">play</button>
+    <script>
+        var myAudio=document.getElementById("myAudio");
+        var btn = document.getElementById("btn1");
+
+        btn.onclick=performAudioTasks;
+        function performAudioTasks(){
+            myAudio.play();
+            myAudio.src="../Assets/Coke Studio Season 14 Pasoori Ali Sethi  (You2Audio.Com).mp4";
+        }
+    </script>
+</body>
+</html>
