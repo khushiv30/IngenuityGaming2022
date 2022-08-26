@@ -6,60 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment-14</title>
-    <style>
-        body {
-            min-height: 100vh;
-            background-color: skyblue;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .para {
-            color: whitesmoke;
-            background-color: black;
-            padding: 20px;
-            width: 1000px;
-            /* justify-content: center; */
-            margin-bottom: 15px;
-            /* margin-left: 40px; */
-            display: flex;
-            justify-content: center;
-            font-size: 34px;
-            border-radius: 10px;
-            font-weight: bold;
-            font-family: Arial, Helvetica, sans-serif;
-
-        }
-
-        .container {
-            background-color: coral;
-            height: 500px;
-            width: 700px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container h1 {
-            color: purple;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .container p {
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-            font-size: 25px;
-            /* float: left; */
-        }
-
-        .container p span {
-            color: black;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/Assignment14.css">
 </head>
 
 <body>
@@ -67,91 +14,33 @@
 
     <div class="para">Fetching data using covid API</div>
     <div class="container">
-        <h1>Today Covid Cases</h1>
-        <div id="para" style="margin-right: 250px;margin-top:15px;width: 400px;">
-            <p>Country Name :
+        <h1>Today's Covid Cases</h1>
+        <div id="para" style="margin-right: 250px;margin-top:25px;width: 400px;">
+            <div style="display:flex;width: 100%;">
+                <!-- <span style="color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                font-size: 25px;">Country Name:
+                </span> -->
+                <h2 style="color: white;font-family:Arial, Helvetica, sans-serif;">Country Name:</h2>
+                <br>
+                <br>
 
-                <span>
-                    <form action=""><select name="" id="coun">
-                            <option value="Country Name">Country Name</option>
-                        </select></form>
-                </span>
-            <p>Date : <span id="date"></span></p>
+                <form action="">
+                    <select style="font-size: 15px;border-radius: 3px;" name="" id="coun">
+                        <option value="Country Name">Country Name</option>
+                    </select>
+                </form>
+
+            </div>
+            <p style="margin-top: 4px;">Date : <span id="date"></span></p>
             <p>Total Cases : <span id="totalCases"></span></p>
-            <p>Total Deaths : <span id="totaldeaths"></span> </p>
+            <p>Total Deaths : <span id="TotalDeaths"></span> </p>
             <p>New Cases : <span id="newcases"></span> </p>
             <p>New Deaths : <span id="newdeaths"></span> </p>
         </div>
     </div>
-    <script>
-        const API_URL = "https://api.covid19api.com/summary";
-
-        function getApiData(url) {
-            return new Promise((resolve, reject) => {
-
-                var request = new XMLHttpRequest();
-
-                request.open("GET", url);
-                request.send();
-
-                request.onload = () => {
-
-
-                    if (request.status === 200) {
-                        resolve(request.response)
-                    }
-                    else {
-                        reject("Not able to fetch data");
-                    }
-                }
-            });
-        }
-
-
-        getApiData(API_URL)
-            .then((val) => {
-
-                displayData(JSON.parse(val));
-            })
-            .catch((err) => console.log("Error" + err));
-
-        function displayData(serverData) {
-
-            var s = document.getElementById("coun");
-            for (var j = 0; j < serverData.Countries.length; j++) {
-                var newDiv = document.createElement("option");
-                newDiv.text = serverData.Countries[j].Country;
-                newDiv.value = j;
-                s.appendChild(newDiv);
-            }
-
-            var x = document.querySelector("form").appendChild(s);
-            s.onclick = function () {
-                if (s.options[s.selectedIndex].value == "Country Name") {
-                    document.getElementById('date').innerHtml = "";
-                    document.getElementById('newdeaths').innerHtml = "";
-                    document.getElementById('totalCases').innerHTML = "";
-                    document.getElementById('totaldeaths').innerHtml = "";
-                    document.getElementById('newcases').innerHtml = "";
-                } else {
-                    var checkvalue = s.options[s.selectedIndex].value;
-
-                    document.getElementById('date').innerHtml = serverData.Countries[checkvalue].Date;
-                    document.getElementById('newdeaths').innerHtml = serverData.Countries[checkvalue].NewDeaths;
-                    document.getElementById('totalCases').innerHTML = serverData.Countries[checkvalue].TotalConfirmed;
-                    document.getElementById('totaldeaths').innerHtml = serverData.Countries[checkvalue].TotalDeaths;
-                    document.getElementById('newcases').innerHtml = serverData.Countries[checkvalue].NewConfirmed;
-                }
-
-            };
-
-
-        }
-
-
-
-
-    </script>
+    <script src="../javascript/Assignment14.js"></script>
 </body>
 
 </html>
