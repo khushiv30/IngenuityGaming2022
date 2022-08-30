@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: aquamarine; */
+    background: url("https://media.istockphoto.com/photos/scary-endless-medieval-catacombs-with-torches-mystical-nightmare-3d-picture-id1308121289?b=1&k=20&m=1308121289&s=170667a&w=0&h=kLzQvhTKi_5UbvYogTTZ2z3FtxtC85kmCs0KOeOsbnM=");
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-family: cursive;
+    font-size: 20px;
+}
+
+#canvas{
+    /* background-color: brown; */
+    border-radius: 5px;
+    margin-top: 12px;
+    border: 1px solid red;
+}
+
+#source{
+    display: none;
+}
+
+#source2{
+    display: none;
+}
