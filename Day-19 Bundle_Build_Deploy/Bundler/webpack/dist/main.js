@@ -1,0 +1,1 @@
+(()=>{var r={84:r=>{r.exports=alert("Showing Alert")}},e={};(function t(i){var o=e[i];if(void 0!==o)return o.exports;var s=e[i]={exports:{}};return r[i](s,s.exports,t),s.exports})(84),alert("This is index file")})();
