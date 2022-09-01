@@ -12,19 +12,19 @@ console.log(result*100);
 
 // Sir ka code 
 
-// Arrow Function
+// // Arrow Function
 
-const sayHi = () => console.log("This is an Arrow Function");
-sayHi();
+// const sayHi = () => console.log("This is an Arrow Function");
+// sayHi();
 
-const add = (x, y) => x + y;
-// let result = add(5, 10);
-// console.log(result * 100);
+// const add = (x, y) => x + y;
+// // let result = add(5, 10);
+// // console.log(result * 100);
 
-// setInterval(() => {
+// // setInterval(() => {
 
-// }, interval);
+// // }, interval);
 
-// array.forEach(element => {
+// // array.forEach(element => {
 
-// });
+// // });

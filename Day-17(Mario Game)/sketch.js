@@ -204,6 +204,8 @@ var gameState = "PLAY";
 
 var restartImg;
 
+var pipeGroup, pipeImage;
+
 function preload() {
   bgImage = loadImage("images/bgnew.jpg");
   mario_running = loadAnimation(
@@ -217,6 +219,8 @@ function preload() {
   );
 
   brickImage = loadImage("images/brick.png");
+
+  pipeImage = loadImage("images/pipe.png");
 
   coinImage = loadAnimation(
     "images/con1.png",
@@ -270,6 +274,8 @@ function setup() {
 
   obstaclesGroup = new Group();
 
+  pipeGroup = new Group();
+
   mario.addAnimation("collided", mario_collided);
 
   restart = createSprite(500, 300);
@@ -303,6 +309,8 @@ function draw() {
     ground.visible = false;
 
     generateBricks();
+
+    generatePipes();
 
     // Stay on Bricks
     for (var i = 0; i < brickGroup.length; i++) {
@@ -422,6 +430,7 @@ function restartGame() {
   obstaclesGroup.destroyEach();
   brickGroup.destroyEach();
   coinsGroup.destroyEach();
+  // pipeGroup.destroyEach();
 
   mario.changeAnimation("running", mario_running);
   mario.scale = 0.2;
@@ -429,4 +438,19 @@ function restartGame() {
   coinScore = 0;
 
   restart.visible = false;
+}
+
+function generatePipes() {
+  if (frameCount % 70 === 0) {
+    var pipe = createSprite(1200, 520, 40, 10);
+    // 
+    
+    pipe.addImage(pipeImage);
+    pipe.scale = 0.5;
+    pipe.velocityX = -5;
+
+    pipe.lifetime = 250;
+
+    pipeGroup.add(pipe);
+  }
 }
