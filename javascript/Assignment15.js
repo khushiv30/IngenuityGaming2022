@@ -3,6 +3,15 @@ var canvas = document.createElement("canvas");
 var ctx = canvas.getContext("2d");
 canvas.width = 512;
 canvas.height = 480;
+// canvas.height=window.innerHeight-20;
+// canvas.width=window.innerWidth-20;
+// canvas.width=window.innerWidth;
+// canvas.height=window.innerHeight;
+// canvas.style.backgroundColor="lightgreen";
+// canvas.style.border="5px dashed darkgreen";
+canvas.style.background="url('../Assets/green backround.png')";
+// canvas.style.backgroundSize="cover";
+// canvas.style.backgroundRepeat="no-repeat";
 document.body.appendChild(canvas);
 
 // Background image
@@ -11,7 +20,15 @@ var bgImage = new Image();
 bgImage.onload = function () {
 	bgReady = true;
 };
-bgImage.src = "../Assets/green backround.png";
+// bgImage.src = "../Assets/green backround.png";
+
+// bgImage.style.backgroundSize="cover";
+
+// bgImage.src="https://media.istockphoto.com/photos/green-textured-cardboard-background-picture-id1353173739?b=1&k=20&m=1353173739&s=170667a&w=0&h=qgD73m2bobSXB2EYZ4cqmjn2uq3q30LGrEw4W4V3BpI=";
+// bgImage.style.width=window.innerWidth;
+// bgImage.style.height=window.innerHeight;
+// bgImage.style.backgroundSize="cover";
+// bgImage.style.backgroundPosition="center";
 
 // Hero image
 var heroReady = false;
@@ -31,6 +48,8 @@ monsterImage.src = "../Assets/monster.png";
 
 // Game objects
 var hero = {
+	h:30,
+	w:30,
 	speed: 256 // movement in pixels per second
 };
 var monster = {};
@@ -59,8 +78,12 @@ var reset = function () {
 
 // Update game objects
 var update = function (modifier) {
+	clear();
 	if (38 in keysDown) { // Player holding up
 		hero.y -= hero.speed * modifier;
+		// if(hero.y >=0 && hero.y >=480){
+		// 	hero.y -= hero.speed * modifier;
+		// }
 	}
 	if (40 in keysDown) { // Player holding down
 		hero.y += hero.speed * modifier;
@@ -80,6 +103,7 @@ var update = function (modifier) {
 		&& monster.y <= (hero.y + 32)
 	) {
 		++monstersCaught;
+		// monstersCaught++;
 		reset();
 	}
 };
@@ -92,19 +116,52 @@ var render = function () {
 
 	if (heroReady) {
 		ctx.drawImage(heroImage, hero.x, hero.y);
+		// clear();
 	}
 
 	if (monsterReady) {
 		ctx.drawImage(monsterImage, monster.x, monster.y);
 	}
 
+	detectWalls();
 	// Score
-	ctx.fillStyle = "rgb(250, 250, 250)";
-	ctx.font = "24px Helvetica";
+	ctx.fillStyle = "rgb(255,255,255)";
+	ctx.font = "27px Helvetica";
 	ctx.textAlign = "left";
 	ctx.textBaseline = "top";
 	ctx.fillText("Goblins caught: " + monstersCaught, 32, 32);
+	// ctx.style.color="darkfreen";
 };
+
+// this is clear function
+function clear() {
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+
+
+// Drawing walls 
+function detectWalls() {
+	// Left wall
+	if (hero.x < 0) {
+	  hero.x = 0;
+	}
+  
+	// Right Wall
+	if (hero.x + hero.w > canvas.width) {
+	  hero.x = canvas.width - hero.w;
+	}
+  
+	// Top wall
+	if (hero.y < 0) {
+	  hero.y = 0;
+	}
+  
+	// Bottom Wall
+	if (hero.y + hero.h > canvas.height) {
+	  hero.y = canvas.height - hero.h;
+	}
+  }
+
 
 // The main game loop
 var main = function () {
@@ -126,5 +183,7 @@ requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame
 
 // Let's play this game!
 var then = Date.now();
+
 reset();
+
 main();
